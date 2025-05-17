@@ -539,7 +539,7 @@
     overflow: hidden;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1000px) {
     .about__flexbox {
         display: flex;
         flex-direction: column;
@@ -561,6 +561,11 @@
         gap: 31.5rem;
         margin-top: 60%;
         margin-left: 40%;
+    }
+
+    .story__board {
+        display: none;
+
     }
 }
 
