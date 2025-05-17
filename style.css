@@ -533,7 +533,7 @@
 .about__card {
     width: 550px;
     height: 750px;
-    position: absolute;
+    /* position: relative; */
     left: 8%;
     top: 15%;
     border-radius: 15px;
@@ -542,6 +542,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 0 0 auto;
 
 }
 
@@ -681,4 +682,75 @@
     width: 100%;
     line-height: 1.5;
     text-align: left;
+}
+
+.about__flexbox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    gap: px;
+    border: 20px black solid;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image__carousel {
+    display: flex;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+
+.carousel__imgs {
+    flex: 0 0 auto;
+    width: 500px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black;
+}
+
+.carousel__imgs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 31.5rem;
+    position: absolute;
+    top: 50%;
+    right: 7%;
+}
+
+.carousel__btn {
+    padding: 30px 30px;
+    background-color: rgba(255, 0, 0, 0.1);
+    max-width: 10px;
+    max-height: 10px;
+    font-size: 2rem;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.story__board {
+    font-size: 2rem;
+    position: absolute;
+    left: 62%;
+    bottom: 87.5%;
+    padding: 10px 165px;
+    background: linear-gradient(to bottom, #e93e82, #e0a93a);
+    width: 27.5%;
+    margin: 0 auto;
 }
