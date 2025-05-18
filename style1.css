@@ -368,8 +368,8 @@
 .about__container {
     height: 1000px;
     width: 100%;
-    background: linear-gradient(to bottom, black, #000000dc, #000000 40%);
-    /* flex-direction: column; */
+    background: linear-gradient(to bottom, #2b2b2b, #0d0d0d);
+    flex-direction: column;
 }
 
 .about__card {
@@ -378,10 +378,8 @@
     position: relative;
     left: 10%;
     border-radius: 15px;
-    box-shadow: 12px 12px 10px 8px #000000;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-    /* background: linear-gradient(to top, #e93e82, #e0a93a); */
-    background: linear-gradient(to top, black 12%, #e93e82, #e0a93a);
+    box-shadow: #9518fc;
+    background: linear-gradient(to top, #e93e82, #e0a93a);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -392,20 +390,19 @@
 #pfp {
     height: 225px;
     width: 200px;
-    margin-top: -10%;
-    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     border-radius: 10px;
 }
 
 .about__info {
-    height: 500px;
+    height: 450px;
     width: 400px;
-    background: linear-gradient(to bottom, #3a3a3a, #000000);
+    background: linear-gradient(to top, #3a3a3a, #000000);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5%;
     /* position: relative; */
 }
 
@@ -450,7 +447,6 @@
 }
 
 .rick__roll {
-    margin-top: 15%;
     padding: 5px 5px;
     background: #e0a93a;
     transition: transform 0.2s ease;
@@ -476,50 +472,13 @@
     transform: scale(1.1);
 }
 
-
-.about__text__card {
-    display: flex;
-    flex-direction: column;
-}
-
-#about__text {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-top: 25px;
-    margin-bottom: -40px;
-    color: #e0a93a;
-}
-
-.about__info p {
-    color: white;
-    width: 300px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
-.about__text__box {
-    position: absolute;
-    width: 850px;
-    height: 750px;
-    border: 5px solid rgb(88, 57, 57);
-    left: 50%;
-    top: 15%;
-    border-radius: 5%;
-    padding: 2rem;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-
 .about__flexbox {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     gap: 20%;
-    /* border: 20px black solid; */
+    border: 20px black solid;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -611,4 +570,191 @@
         height: 1600px;
         background: linear-gradient(to bottom, #2b2b2b, #0d0d0d);
     }
+}
+
+#about-me-title {
+    font-size: 10rem;
+    margin-left: 18%;
+    top: 900px;
+    position: fixed;
+    background: linear-gradient(to top, #ffffff60 25%, #000000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    z-index: -1;
+}
+
+.about__container {
+    height: 1000px;
+    width: 100%;
+    background: linear-gradient(to bottom, black, #000000dc, #000000 40%);
+    position: relative;
+}
+
+.about__card {
+    width: 550px;
+    height: 700px;
+    position: absolute;
+    left: 8%;
+    top: 25%;
+    border-radius: 15px;
+    background: linear-gradient(to top, black 12%, #e93e82, #e0a93a);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#pfp {
+    position: relative;
+    top: -90px;
+    height: 225px;
+    width: 200px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.about__info {
+    position: relative;
+    top: -50px;
+    height: 450px;
+    width: 400px;
+    background: linear-gradient(to bottom, #3a3a3a, #000000);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.about__info h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: -10px;
+}
+
+#my__title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 1;
+    font-size: 1.2rem;
+    color: #e0a93a;
+    margin-top: 15px;
+}
+
+.profile__btns {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+#insta__btn,
+#github__btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    height: 40px;
+    width: 160px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    background: linear-gradient(to right, #e0a93a, black 75%);
+    transition: transform 0.2s ease;
+    border: 1px solid black;
+}
+
+.rick__roll {
+    padding: 5px 5px;
+    background: #e0a93a;
+    transition: transform 0.2s ease;
+    border-radius: 8px;
+    text-align: center;
+
+}
+
+.rick__roll a {
+    height: 40px;
+    width: 400px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 1px;
+    text-align: left;
+}
+
+#insta__btn:hover,
+#github__btn:hover,
+.rick__roll:hover {
+    transform: scale(1.1);
+}
+
+
+.about__text__card {
+    display: flex;
+    flex-direction: column;
+}
+
+#about__text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: -40px;
+    color: #e0a93a;
+}
+
+.about__info p {
+    color: white;
+    width: 300px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.about__text__box {
+    position: absolute;
+    width: auto;
+    height: 750px;
+
+    left: 55%;
+    top: 48%;
+    border-radius: 5%;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#projtitle-what {
+    font-size: 10rem;
+    color: white;
+}
+
+#projtitle-ido {
+    font-size: 10rem;
+    color: white;
+
+    background: linear-gradient(to top, black 20%, #e93e82, #e0a93a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#projdivider {
+    border: rgb(255, 255, 255) 1px solid;
+
+}
+
+.projects__container {
+    top: 1000px;
+    height: 1000px;
+    width: 100%;
+    z-index: 1;
+    background: black;
+    position: relative;
 }
