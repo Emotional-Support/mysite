@@ -663,20 +663,27 @@
     gap: 10%;
 }
 
-.project__carousel {
-    position: relative;
-    right: 5%;
-    width: 400px;
-    height: 500px;
-    border: 5px solid green;
-}
-
-/* progress module */
 .progress__div {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+}
+
+.prog__btns {
+    width: 75%;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    bottom: 25px;
+}
+
+.prog__btns button {
+    width: 75%;
+    height: 25px;
+    background-color: #22ff00;
 }
 
 #prog__bar {
@@ -686,99 +693,53 @@
     padding-bottom: 15px;
 }
 
-.prog__btns {
-    width: 75%;
-    height: 25px;
-    display: flex;
-    justify-content: space-between;
+#my__journey {
     position: relative;
-    bottom: 25px;
+    top: 5%;
+    color: white;
 }
 
-.prog__btns button {
-    width: 48%;
-    height: 100%;
-    background-color: #22ff00;
-}
-
-#my__journey,
-#move__info,
-.project__cards {
+#move__info {
     color: white;
 }
 
 .project__cards {
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 25px;
     width: inherit;
     height: inherit;
+
 }
 
-#prog__bar2 {
-    display: none;
+#project__info {
+    position: relative;
+
 }
 
-#movingDot2 {
-    display: none;
+.project__carousel {
+    position: relative;
+    right: 5%;
+    width: 400px;
+    height: 500px;
+    border: 5px solid green;
 }
 
-@media (max-width: 768px) {
-    .progress__div {
-        width: 100%;
-        height: 100%;
-    }
+@media screen and (max-width: 760px) {
 
     .projects__container {
+        display: flex;
         flex-direction: column;
-        gap: 75px;
+        width: 100%;
     }
 
     .myprojects__textbox {
-        width: 90vw;
-        height: auto;
-        left: 0px;
+        width: 100%;
     }
 
     .project__carousel {
-        width: 90vw;
-        height: auto;
-        position: relative;
-        left: 0px;
-    }
-
-    #prog__bar {
-        display: none;
-    }
-
-    #movingDot {
-        display: none;
-    }
-
-    #movingDot2 {
-        display: block;
-    }
-
-    #prog__bar2 {
         width: 100%;
-        height: auto;
-        aspect-ratio: 900 / 375;
-        display: block;
-        margin: 0 auto;
-        min-height: 200px;
-        position: relative;
-        transform: scale(1.35);
-        left: 30px;
-        /* left: 30px;   <-- REMOVE */
-        /* transform: scale(1.35);  <-- REMOVE */
-    }
-
-
-
-    .prog__btns {
-        width: 100%;
-        top: 25px;
-        position: relative;
     }
 }

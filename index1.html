@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MYSITE</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style1.css" />
 </head>
 
 <body>
@@ -144,7 +144,7 @@
                 </div>
                 <div class="progress__div">
                     <h2 id="move__info">Click to Move Along Timeline</h2>
-                    <svg id="prog__bar" width="900" height="375" xmlns="http://www.w3.org/2000/svg">
+                    <!-- <svg id="prog__bar" width="900" height="375" xmlns="http://www.w3.org/2000/svg">
                         <path id="timelinePath" d="M 100 200 
                                  C 200 50, 300 50, 400 200 
                                  C 500 350, 600 350, 700 200" stroke="#4A90E2" fill="none" stroke-width="4" />
@@ -166,8 +166,9 @@
                         <text class="time" x="700" y="225" fill="white" text-anchor="middle">The Future</text>
 
                         <circle id="movingDot" r="10" fill="orange" />
-                    </svg>
-                    <svg id="prog__bar2" viewBox="0 0 900 375" xmlns="http://www.w3.org/2000/svg">
+                    </svg> -->
+                    <svg id="prog__bar" viewBox="0 0 900 375" preserveAspectRatio="xMidYMid meet"
+                        xmlns="http://www.w3.org/2000/svg">
                         <path id="timelinePath" d="M 100 200 
                                  C 200 50, 300 50, 400 200 
                                  C 500 350, 600 350, 700 200" stroke="#4A90E2" fill="none" stroke-width="4" />
@@ -188,7 +189,7 @@
                         <text class="time" x="550" y="337.5" fill="white" text-anchor="middle">2025-Present</text>
                         <text class="time" x="700" y="225" fill="white" text-anchor="middle">The Future</text>
 
-                        <circle id="movingDot2" r="10" cx="100" cy="200" fill="orange" />
+                        <circle id="movingDot" r="10" fill="orange" />
                     </svg>
                     <div class="prog__btns">
                         <button onclick="moveToPrevPoint()">Back</button>
