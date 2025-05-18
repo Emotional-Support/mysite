@@ -602,13 +602,21 @@
     .about__flexbox {
         display: flex;
         flex-direction: column;
-        gap: 50px;
+        gap: 7.5%;
         justify-content: space-around;
         align-items: center;
     }
 
     .about__container {
-        height: 1600px;
+        height: 1800px;
         background: linear-gradient(to bottom, #2b2b2b, #0d0d0d);
+    }
+
+    .about__card {
+        max-width: 100%;
+        position: relative;
+        top: 7.5%;
+        margin-right: 20%;
+        box-shadow: none;
     }
 }
