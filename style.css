@@ -369,16 +369,14 @@
     height: 1000px;
     width: 100%;
     background: linear-gradient(to bottom, #2b2b2b, #0d0d0d);
-    /* position: relative; */
     flex-direction: column;
 }
 
 .about__card {
     width: 550px;
     height: 750px;
-    /* position: relative; */
-    left: 8%;
-    top: 15%;
+    position: relative;
+    left: 10%;
     border-radius: 15px;
     box-shadow: #9518fc;
     background: linear-gradient(to top, #e93e82, #e0a93a);
@@ -529,17 +527,90 @@
 
 .about__flexbox {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     position: relative;
-    gap: 0px;
+    gap: 20%;
     border: 20px black solid;
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
 
-@media screen and (max-width: 1000px) {
+.carousel {
+    position: relative;
+    width: 400px;
+    height: 700px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background: black;
+}
+
+.carousel__images {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 5px solid #240b36;
+}
+
+.carousel__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+#left-arrow {
+    left: 10px;
+}
+
+#right-arrow {
+    right: 10px;
+}
+
+.rotate {
+    transform: rotate(90deg) scale(1.75);
+    object-fit: contain;
+}
+
+.story__board {
+    font-size: 1.5rem;
+    color: white;
+    background: linear-gradient(to right, #c31432, #240b36);
+    padding: 10px 10px;
+    text-align: center;
+    border: 4px solid #240b36;
+    border-bottom: none;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel {
+        max-width: 100%;
+    }
+
+    .arrow {
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+
     .about__flexbox {
         display: flex;
         flex-direction: column;
@@ -551,79 +622,5 @@
     .about__container {
         height: 1600px;
         background: linear-gradient(to bottom, #2b2b2b, #0d0d0d);
-        /* position: relative; */
     }
-
-    .carousel__box {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 31.5rem;
-        margin-top: 60%;
-        margin-left: 40%;
-    }
-
-    .story__board {
-        display: none;
-
-    }
-}
-
-.image__carousel {
-    display: flex;
-    overflow: hidden;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    width: 100%;
-}
-
-.carousel__imgs {
-    flex: 0 0 auto;
-    width: 500px;
-    height: 700px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 5px solid black;
-}
-
-.carousel__imgs img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.carousel__box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 31.5rem;
-    position: absolute;
-    top: 50%;
-    right: 7%;
-}
-
-.carousel__btn {
-    padding: 30px 30px;
-    background-color: rgba(255, 0, 0, 0.1);
-    max-width: 10px;
-    max-height: 10px;
-    font-size: 2rem;
-    z-index: 10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.story__board {
-    font-size: 2rem;
-    position: absolute;
-    left: 62%;
-    bottom: 87.5%;
-    padding: 10px 165px;
-    background: linear-gradient(to bottom, #e93e82, #e0a93a);
-    width: 27.5%;
-    margin: 0 auto;
 }

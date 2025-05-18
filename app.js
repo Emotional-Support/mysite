@@ -8,18 +8,19 @@ const mobileMenu = () => {
 
 menu.addEventListener("click", mobileMenu);
 
-const imgs = document.getElementsByClassName("carousel__imgs");
-const btn_left = document.getElementById("image__left");
-const btn_right = document.getElementById("image__right");
+const imgs = document.getElementsByClassName("carousel__photo");
+const btn_left = document.getElementById("left-arrow");
+const btn_right = document.getElementById("right-arrow");
 
 let currentIndex = 0;
 
-// Hide all but the first image
 for (let i = 0; i < imgs.length; i++) {
+    if (imgs[i].width > imgs[i].height) {
+        imgs[i].classList.add("rotate");
+    }
+
     imgs[i].style.display = i === 0 ? "block" : "none";
 }
-
-// Initial button state
 updateButtons();
 
 btn_left.addEventListener("click", () => {
@@ -40,7 +41,6 @@ btn_right.addEventListener("click", () => {
     }
 });
 
-// Button state management
 function updateButtons() {
     btn_left.disabled = currentIndex === 0;
     btn_right.disabled = currentIndex === imgs.length - 1;
