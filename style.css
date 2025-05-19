@@ -282,7 +282,7 @@
     border-bottom: 4px solid rgb(132, 0, 255);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
 
     .hero {
         padding: 100px;
@@ -602,9 +602,19 @@
     border-bottom: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
     .carousel {
         max-width: 100%;
+    }
+
+    .carousel__photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 
     .arrow {
