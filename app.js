@@ -8,6 +8,11 @@ const mobileMenu = () => {
 };
 
 menu.addEventListener("click", mobileMenu);
+menuLinks.addEventListener("click", () => {
+    menu.classList.remove("is-active");
+    menuLinks.classList.remove("active");
+});
+
 
 const imgs = document.getElementsByClassName("carousel__photo");
 const btn_left = document.getElementById("left-arrow");
