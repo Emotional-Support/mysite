@@ -46,8 +46,63 @@ function updateButtons() {
     btn_left.disabled = cIndex === 0;
     btn_right.disabled = cIndex === imgs.length - 1;
 }
+// const path = document.getElementById('timelinePath');
+// const dot = document.getElementById('movingDot');
+// const dot2 = document.getElementById('movingDot2');
+
+// const totalPoints = 5;
+// const totalLength = path.getTotalLength();
+
+// const points = Array.from({ length: totalPoints }, (_, i) =>
+//     path.getPointAtLength((i / (totalPoints - 1)) * totalLength)
+// );
+
+// let currentIndex = 0;
+
+// const updateStory = () => {
+//     let currentStory = stories[currentIndex];
+
+//     let title = document.getElementById("project__title");
+//     let para = document.getElementById("project__info");
+
+//     title.textContent = currentStory[0];
+//     para.textContent = currentStory[1];
+// }
+
+// function updateDot() {
+//     const point = points[currentIndex];
+//     dot.setAttribute("cx", point.x);
+//     dot.setAttribute("cy", point.y);
+//     dot2.setAttribute("cx", point.x);
+//     dot2.setAttribute("cy", point.y);
+// }
+
+// function moveToNextPoint() {
+//     if (currentIndex < points.length - 1) {
+//         currentIndex++;
+//         updateDot();
+//         updateStory()
+//     }
+// }
+
+// function moveToPrevPoint() {
+//     if (currentIndex > 0) {
+//         currentIndex--;
+//         updateDot();
+//         updateStory()
+//     }
+// }
+
+// updateDot();
+// updateStory();
 const path = document.getElementById('timelinePath');
+const path2 = document.getElementById('timelinePath');
 const dot = document.getElementById('movingDot');
+const dot2 = document.getElementById('movingDot2');
+
+// If you're using tooltips as <text> in the SVG
+const tooltip = document.querySelector('#tooltip1'); // adjust ID as needed
+const tooltip2 = document.querySelector('#tooltip2'); // if 2nd one needed
 
 const totalPoints = 5;
 const totalLength = path.getTotalLength();
@@ -58,7 +113,27 @@ const points = Array.from({ length: totalPoints }, (_, i) =>
 
 let currentIndex = 0;
 
-const updateStory = () => {
+function updateDot() {
+    const point = points[currentIndex];
+    dot.setAttribute("cx", point.x);
+    dot.setAttribute("cy", point.y);
+    dot2.setAttribute("cx", point.x);
+    dot2.setAttribute("cy", point.y);
+
+    if (tooltip) {
+        tooltip.setAttribute("x", point.x);
+        tooltip.setAttribute("y", point.y - 20);
+        tooltip.textContent = stories[currentIndex][0];
+    }
+
+    if (tooltip2) {
+        tooltip2.setAttribute("x", point.x);
+        tooltip2.setAttribute("y", point.y - 20);
+        tooltip2.textContent = stories[currentIndex][0];
+    }
+}
+
+function updateStory() {
     let currentStory = stories[currentIndex];
 
     let title = document.getElementById("project__title");
@@ -68,17 +143,11 @@ const updateStory = () => {
     para.textContent = currentStory[1];
 }
 
-function updateDot() {
-    const point = points[currentIndex];
-    dot.setAttribute("cx", point.x);
-    dot.setAttribute("cy", point.y);
-}
-
 function moveToNextPoint() {
     if (currentIndex < points.length - 1) {
         currentIndex++;
         updateDot();
-        updateStory()
+        updateStory();
     }
 }
 
@@ -86,7 +155,7 @@ function moveToPrevPoint() {
     if (currentIndex > 0) {
         currentIndex--;
         updateDot();
-        updateStory()
+        updateStory();
     }
 }
 

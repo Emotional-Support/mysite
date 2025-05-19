@@ -144,7 +144,8 @@
                 </div>
                 <div class="progress__div">
                     <h2 id="move__info">Click to Move Along Timeline</h2>
-                    <svg id="prog__bar" viewBox="0 0 900 375" xmlns="http://www.w3.org/2000/svg">
+
+                    <svg id="prog__bar" width="900" height="375" xmlns="http://www.w3.org/2000/svg">
                         <path id="timelinePath" d="M 100 200 
                                  C 200 50, 300 50, 400 200 
                                  C 500 350, 600 350, 700 200" stroke="#4A90E2" fill="none" stroke-width="4" />
@@ -165,8 +166,41 @@
                         <text class="time" x="550" y="337.5" fill="white" text-anchor="middle">2025-Present</text>
                         <text class="time" x="700" y="225" fill="white" text-anchor="middle">The Future</text>
 
-                        <circle id="movingDot" r="10" cx="100" cy="200" fill="orange" />
+                        <g class="dot-group">
+                            <circle class="odot" cx="100" cy="200" r="10" fill="orange" />
+                            <text class="tooltip" x="100" y="180">2012-2017</text>
+                        </g>
                     </svg>
+
+
+
+                    <svg id="prog__bar2" viewBox="0 0 900 375" xmlns="http://www.w3.org/2000/svg">
+                        <path id="timelinePath2" d="M 100 200 
+                                 C 200 50, 300 50, 400 200 
+                                 C 500 350, 600 350, 700 200" stroke="#4A90E2" fill="none" stroke-width="4" />
+
+
+                        <circle cx="100" cy="200" r="8" fill="#4A90E2" />
+                        <circle cx="250.00001525878906" cy="87.5" r="8" fill="#4A90E2" />
+                        <circle cx="399.9999694824219" cy="199.99996948242188" r="8" fill="#4A90E2" />
+                        <circle cx="550" cy="312.5" r="8" fill="#4A90E2" />
+                        <circle cx="700" cy="200" r="8" fill="#4A90E2" />
+
+
+                        <text class="time" x="100" y="225" fill="white" text-anchor="middle">2012-2017</text>
+                        <text class="time" x="250.00001525878906" y="112.5" fill="white"
+                            text-anchor="middle">2018-2021</text>
+                        <text class="time" x="399.9999694824219" y="225" fill="white"
+                            text-anchor="middle">2022-2024</text>
+                        <text class="time" x="550" y="337.5" fill="white" text-anchor="middle">2025-Present</text>
+                        <text class="time" x="700" y="225" fill="white" text-anchor="middle">The Future</text>
+
+                        <g class="dot-group">
+                            <circle class="odot" cx="100" cy="200" r="10" fill="orange" />
+                            <text class="tooltip" x="100" y="180">2012-2017</text>
+                        </g>
+                    </svg>
+
                     <div class="prog__btns">
                         <button onclick="moveToPrevPoint()">Back</button>
                         <button onclick="moveToNextPoint()">Forward</button>
