@@ -6,6 +6,17 @@
     scroll-behavior: smooth;
 }
 
+:root {
+    --bg: #1c1c1e;
+    --accent: #00d1b2;
+    --text-primary: #ffffff;
+    --text-secondary: #aaa;
+    --radius: 16px;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    --transition: 0.3s ease-in-out;
+    --font: 'Inter', sans-serif;
+}
+
 .navbar {
     background: #221111;
     background-image: -webkit-linear-gradient(to right, #e93e82, #e0a93a);
@@ -627,13 +638,17 @@
 }
 
 #projects {
-    scroll-margin-top: 190px;
+    scroll-margin-top: 100px;
 }
 
 .projects {
     height: 900px;
     width: 100%;
-    background-color: black;
+    background: var(--bg);
+    font-family: var(--font);
+    height: 100vh;
+    margin: 0;
+    color: var(--text-primary);
 }
 
 .section__header {
@@ -641,36 +656,41 @@
     color: rgb(255, 0, 0);
     text-align: center;
     position: relative;
-    bottom: 10%;
     padding: 15px 10px;
-    background-color: rgb(30, 29, 29);
+    background-color: #0e0e0f;
 }
 
 .projects__container {
+    position: relative;
+    top: 7.5%;
     margin-top: 2.5%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20%;
+    gap: 10%;
 }
 
 .myprojects__textbox {
     width: 700px;
-    height: 500px;
-    border: 5px solid rgb(208, 0, 0);
+    height: 520px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10%;
+    gap: 1%;
+    background: var(--bg);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
 }
 
-.project__carousel {
-    position: relative;
-    right: 5%;
-    width: 400px;
-    height: 500px;
-    border: 5px solid green;
+
+.myprojects__textbox:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
+
+
 
 /* progress module */
 .progress__div {
@@ -688,34 +708,81 @@
 }
 
 .prog__btns {
-    width: 75%;
-    height: 25px;
+    width: 675px;
     display: flex;
     justify-content: space-between;
     position: relative;
-    bottom: 25px;
+    bottom: 7.5%;
 }
 
 .prog__btns button {
-    width: 48%;
+    width: auto;
     height: 100%;
-    background-color: #22ff00;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--accent);
+    color: #000;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition), transform var(--transition);
 }
 
-#my__journey,
-#move__info,
-.project__cards {
-    color: white;
+.prog__btns button:hover {
+    background-color: #00b89c;
+    transform: scale(1.05);
 }
 
-.project__cards {
+#my__journey {
+    color: rgb(106, 105, 105);
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+#move__info {
+    color: rgb(174, 136, 11);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.project__carousel {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    width: inherit;
-    height: inherit;
+    gap: 2rem;
+    padding: 2rem;
+    width: 35%;
+    max-width: 700px;
 }
+
+.project__card {
+    background: var(--card-bg);
+    color: var(--text-main);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.project__card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+}
+
+.project__title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--card-accent);
+    margin-bottom: 1rem;
+}
+
+.project__info {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+
 
 #prog__bar2 {
     display: none;
