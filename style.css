@@ -112,7 +112,7 @@
 
 .navbar__btn:hover {
     color: #22ff00;
-    display: block;
+    /* display: block; */
     filter: drop-shadow(0 0 10px #fffdef);
 }
 
@@ -190,11 +190,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 400px;
         height: 80px;
         margin: 0;
 
     }
+
+
 
     #mobile-menu {
         position: absolute;
