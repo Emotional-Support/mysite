@@ -97,3 +97,6 @@ function moveToPrevPoint() {
 
 updateDot();
 updateStory();
+
+const bar = document.querySelector('.stk__bar');
+bar.innerHTML += bar.innerHTML;
