@@ -54,6 +54,8 @@ function updateButtons() {
 const path = document.getElementById('timelinePath');
 const dot = document.getElementById('movingDot');
 
+
+const dates = document.getElementsByClassName("time");
 const totalPoints = 5;
 const totalLength = path.getTotalLength();
 
@@ -62,6 +64,21 @@ const points = Array.from({ length: totalPoints }, (_, i) =>
 );
 
 let currentIndex = 0;
+
+const updateTextShadow = (forward) => {
+    const currDate = dates[currentIndex];
+    currDate.setAttribute("fill", "red");
+    // currDate.style.textShadow = "#FFFECE 0px 0px 3px";
+    if (forward) {
+        dates[currentIndex - 1].style.textShadow = "none";
+        dates[currentIndex - 1].setAttribute("fill", "white");
+    }
+    else {
+        dates[currentIndex + 1].style.textShadow = "none";
+        dates[currentIndex + 1].setAttribute("fill", "white");
+    }
+
+}
 
 const updateStory = () => {
     let currentStory = stories[currentIndex];
@@ -83,7 +100,8 @@ function moveToNextPoint() {
     if (currentIndex < points.length - 1) {
         currentIndex++;
         updateDot();
-        updateStory()
+        updateStory();
+        updateTextShadow(true);
     }
 }
 
@@ -91,12 +109,67 @@ function moveToPrevPoint() {
     if (currentIndex > 0) {
         currentIndex--;
         updateDot();
-        updateStory()
+        updateStory();
+        updateTextShadow(false);
     }
 }
 
 updateDot();
 updateStory();
+updateTextShadow()
 
 const bar = document.querySelector('.stk__bar');
 bar.innerHTML += bar.innerHTML;
+
+const stk = document.querySelector('.tape__text');
+stk.innerHTML += stk.innerHTML;
+
+let flip = document.getElementById("flip__btn1");
+let flip2 = document.getElementById("flip__btn2");
+let flip_box = document.getElementById("proj__textbox_flip")
+flip.addEventListener("click", () => { flip_box.classList.toggle("activeFlip") });
+flip2.addEventListener("click", () => { flip_box.classList.toggle("activeFlip") });
+
+
+const slider__boxes = document.getElementsByClassName("slider__flip");
+let in_focus = 0;
+
+let p_btn = document.getElementById("prevBtn");
+let n_btn = document.getElementById("nextBtn");
+
+const updateVisibility = () => {
+    for (let bx of slider__boxes) {
+        if (bx.classList.contains("in-focus")) {
+            bx.style.display = "block";
+        } else {
+            bx.style.display = "none";
+        }
+    }
+
+    p_btn.disabled = in_focus <= 0;
+    n_btn.disabled = in_focus >= slider__boxes.length - 1;
+};
+
+const updateFocusRight = () => {
+    if (in_focus < slider__boxes.length - 1) {
+        slider__boxes[in_focus].classList.remove("in-focus");
+        in_focus++;
+        slider__boxes[in_focus].classList.add("in-focus");
+        updateVisibility();
+    }
+};
+
+const updateFocusLeft = () => {
+    if (in_focus > 0) {
+        slider__boxes[in_focus].classList.remove("in-focus");
+        in_focus--;
+        slider__boxes[in_focus].classList.add("in-focus");
+        updateVisibility();
+    }
+};
+
+p_btn.addEventListener("click", updateFocusLeft);
+n_btn.addEventListener("click", updateFocusRight);
+
+slider__boxes[in_focus].classList.add("in-focus");
+updateVisibility();
