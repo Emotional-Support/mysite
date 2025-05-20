@@ -528,21 +528,6 @@
 }
 
 
-#projtitle-what {
-    font-size: 10rem;
-    color: white;
-}
-
-#projtitle-ido {
-    font-size: 10rem;
-    color: white;
-    background: linear-gradient(to top, black 20%, #e93e82, #e0a93a);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-
 .about__text__card {
     display: flex;
     flex-direction: column;
@@ -567,8 +552,9 @@
     position: absolute;
     width: 850px;
     height: 750px;
+    border: 5px solid rgb(88, 57, 57);
     left: 50%;
-    top: 28%;
+    top: 15%;
     border-radius: 5%;
     padding: 2rem;
     box-sizing: border-box;
@@ -580,7 +566,7 @@
 
 .about__flexbox {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     gap: 20%;
@@ -592,9 +578,8 @@
 
 .carousel {
     position: relative;
-    top: 1.5rem;
-    width: 350px;
-    height: 600px;
+    width: 400px;
+    height: 700px;
     margin: auto;
     overflow: hidden;
     border-radius: 10px;
