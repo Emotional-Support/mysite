@@ -876,6 +876,7 @@ html {
     background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #000;
@@ -887,14 +888,35 @@ html {
 }
 
 .slider__card_back {
+    justify-content: flex-start;
     transform: rotateY(180deg);
 }
 
 .proj__link {
-    padding: 50px 50px;
+    position: relative;
+    top: 30%;
+    padding: 5px 17.5px;
     background-color: #e93e82;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
 }
 
+#proj__title {
+    width: 100%;
+    padding: 20px 10px;
+    background-color: #00b89c;
+    font-size: 1.2rem;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    font-weight: 800;
+}
+
+#proj__info {
+    padding-top: 10px;
+    font-size: 1rem;
+}
 
 .slider__btns {
     display: flex;
